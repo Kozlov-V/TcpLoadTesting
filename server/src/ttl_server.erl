@@ -24,12 +24,12 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
-	Interal = case application:get_env(test_tcp_load, run_interval) of
+	Interal = case application:get_env(run_interval) of
 		undefined -> ?DEFAULT_INTERVAL;
 		{ok, Val} -> Val * 1000
 	end,
 
-	LogFileName = case application:get_env(test_tcp_load, log_file_name) of
+	LogFileName = case application:get_env(log_file_name) of
 		undefined -> ?DEFAULT_LOG_FILE_NAME;
 		{ok, Val2} -> Val2
 	end,
