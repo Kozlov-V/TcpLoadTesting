@@ -77,7 +77,7 @@ code_change(_OldVsn, State, _Extra) ->
 %% ===================================================================
 
 write_header(LogFile) ->
-	Data = "Time, MemTotal(MB), MemAlloc(MB), MaxPAlloc(KB)\n",
+	Data = "Time, MemTotal(MB), MemAlloc(MB), MaxEPAlloc(KB)\n",
 	write_data(LogFile, Data).
 
 
